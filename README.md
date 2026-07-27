@@ -70,8 +70,10 @@ Obtaining a Display Link unlocks the recipe in the survival recipe book.
 
 ## Usage
 
-1. Hold a pair of Factory HUD Goggles and right-click a block to bind it.
-2. Right-click the same block with the same pair to remove that binding.
+1. Hold a pair of Factory HUD Goggles and Shift + right-click a block twice
+   within five seconds to bind it.
+2. Shift + right-click the same block twice to remove that binding. A normal
+   right-click remains available for block GUIs and other interactions.
 3. Wear the goggles to display their dashboard.
 4. In any inventory or container, hover the goggles and press Create/Ponder's
    configured ponder key (`W` by default) to open the layout editor.
@@ -125,8 +127,8 @@ standalone HUD data migration regression tests.
 To publish a tagged release:
 
 ```bash
-git tag v0.4.0
-git push origin v0.4.0
+git tag v0.4.1
+git push origin v0.4.1
 ```
 
 ## License
@@ -175,8 +177,8 @@ Released under the [MIT License](LICENSE). Copyright © 2026 z33awa.
 
 ### 使用方法
 
-1. 手持工厂仪表护目镜右击方块，将其绑定到当前这副护目镜。
-2. 再次右击同一方块即可解除绑定。
+1. 手持工厂仪表护目镜，在五秒内对同一方块 Shift + 右键两次，将其绑定到当前这副护目镜。
+2. 对同一方块再次执行两次 Shift + 右键即可解除绑定；普通右键仍会正常打开方块 GUI 或执行原有交互。
 3. 戴上护目镜后，仪表盘会持续显示。
 4. 在玩家物品栏、装备栏、箱子或其他容器中，将鼠标悬停在护目镜上并按机械动力
    “思索”按键（默认 `W`），打开布局编辑器。

@@ -145,6 +145,19 @@ public final class HudBindingStore {
         return ToggleResult.ADDED;
     }
 
+    public static boolean containsTarget(
+            ItemStack goggles,
+            ResourceLocation dimension,
+            BlockPos pos
+    ) {
+        for (HudBinding binding : get(goggles)) {
+            if (binding.sameTarget(dimension, pos)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static boolean updatePosition(ServerPlayer player, UUID id, float x, float y) {
         ItemStack goggles = gogglesContaining(player, id);
         if (goggles.isEmpty() || !Float.isFinite(x) || !Float.isFinite(y)) {

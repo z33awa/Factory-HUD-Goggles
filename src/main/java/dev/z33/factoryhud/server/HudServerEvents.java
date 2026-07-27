@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 public final class HudServerEvents {
@@ -27,6 +28,13 @@ public final class HudServerEvents {
                 player.displayClientMessage(Component.translatable("message.factory_hud.migrated"), false);
             }
             HudSnapshotService.send(player, goggles);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerLoggedOut(PlayerEvent.PlayerLoggedOutEvent event) {
+        if (event.getEntity() instanceof ServerPlayer player) {
+            BindingConfirmationStore.clear(player);
         }
     }
 }

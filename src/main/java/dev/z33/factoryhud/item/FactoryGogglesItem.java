@@ -1,6 +1,7 @@
 package dev.z33.factoryhud.item;
 
 import dev.z33.factoryhud.data.HudBindingStore;
+import dev.z33.factoryhud.server.BindingConfirmationStore;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -65,14 +66,41 @@ public final class FactoryGogglesItem extends Item implements Equipable {
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
-        if (!(context.getPlayer() instanceof ServerPlayer player)) {
+        Player contextPlayer = context.getPlayer();
+        if (contextPlayer == null || !contextPlayer.isShiftKeyDown()) {
+            return InteractionResult.PASS;
+        }
+        if (!(contextPlayer instanceof ServerPlayer player)) {
             return InteractionResult.SUCCESS;
         }
+
+        ItemStack goggles = context.getItemInHand();
+        var dimension = context.getLevel().dimension().location();
+        var pos = context.getClickedPos();
+        boolean removing = HudBindingStore.containsTarget(goggles, dimension, pos);
+        if (!BindingConfirmationStore.confirm(
+                player,
+                goggles,
+                dimension,
+                pos,
+                removing
+        )) {
+            player.displayClientMessage(
+                    Component.translatable(
+                            removing
+                                    ? "message.factory_hud.confirm_unbind"
+                                    : "message.factory_hud.confirm_bind"
+                    ).withStyle(removing ? ChatFormatting.YELLOW : ChatFormatting.AQUA),
+                    true
+            );
+            return InteractionResult.CONSUME;
+        }
+
         HudBindingStore.ToggleResult result = HudBindingStore.toggle(
                 player,
-                context.getItemInHand(),
-                context.getLevel().dimension().location(),
-                context.getClickedPos(),
+                goggles,
+                dimension,
+                pos,
                 context.getClickedFace()
         );
         Component message = switch (result) {
