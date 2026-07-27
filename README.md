@@ -24,6 +24,7 @@ English · [简体中文](#简体中文)
 ## Features
 
 - Bind an unlimited number of blocks to each individual pair of goggles.
+- Find the goggles in their dedicated Factory HUD creative tab.
 - Display Create goggle information as persistent HUD cards.
 - Drag cards anywhere on screen in a transparent layout editor.
 - Add a note below each card to identify its purpose.
@@ -57,12 +58,15 @@ Install the mod on both the client and server.
 
 ## Crafting
 
-The goggles are crafted around a pair of Create Engineer's Goggles:
+The goggles are a mid-game upgrade built around Create display technology:
 
 ```text
-Redstone      Gold Ingot       Redstone
-Gold Ingot    Create Goggles   Gold Ingot
+Brass Ingot   Electron Tube    Brass Ingot
+Redstone      Create Goggles   Redstone
+              Display Link
 ```
+
+Obtaining a Display Link unlocks the recipe in the survival recipe book.
 
 ## Usage
 
@@ -121,8 +125,8 @@ standalone HUD data migration regression tests.
 To publish a tagged release:
 
 ```bash
-git tag v0.3.9
-git push origin v0.3.9
+git tag v0.4.0
+git push origin v0.4.0
 ```
 
 ## License
@@ -140,6 +144,7 @@ Released under the [MIT License](LICENSE). Copyright © 2026 z33awa.
 ### 功能
 
 - 每副护目镜可以绑定任意数量的数据源。
+- 可在独立的“工厂仪表盘”创造模式分页中找到护目镜。
 - 将机械动力护目镜信息持续显示为独立卡片。
 - 在透明编辑界面中直接拖动卡片。
 - 为每张卡片添加用途备注。
@@ -178,6 +183,18 @@ Released under the [MIT License](LICENSE). Copyright © 2026 z33awa.
 5. 左键拖动卡片；右键编辑备注；Shift + 右键删除绑定。
 6. 在卡片上滚动滚轮调整大小；按住 Shift 滚动调整背景透明度。
 7. 使用右上角设置按钮配置不可用卡片的自动淡化。
+
+### 合成配方
+
+工厂仪表护目镜是一件使用机械动力显示技术制作的中期升级装备：
+
+```text
+黄铜锭        电子管        黄铜锭
+红石          工程师护目镜  红石
+              显示链接器
+```
+
+生存模式中获得显示链接器后，会自动在配方书中解锁该配方。
 
 ### 存档兼容
 

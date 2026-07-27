@@ -18,6 +18,11 @@ public final class ModItems {
             )
     );
 
+    public static final DeferredItem<Item> CREATIVE_TAB_ICON = ITEMS.register(
+            "creative_tab_icon",
+            () -> new Item(new Item.Properties())
+    );
+
     private ModItems() {
     }
 

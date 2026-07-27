@@ -1,5 +1,6 @@
 {
   "item.factory_hud.factory_goggles": "Factory HUD Goggles",
+  "itemGroup.factory_hud": "Factory HUD",
   "tooltip.factory_hud.binding_count": "Bound data sources: %s",
   "tooltip.factory_hud.edit_hint": "Press W to open configuration",
   "tooltip.factory_hud.bind_hint": "Use these goggles on a block to link or unlink it",

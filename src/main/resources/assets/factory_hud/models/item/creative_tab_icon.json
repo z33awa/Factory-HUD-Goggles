@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "factory_hud:item/factory_goggles_tab_icon"
+  }
+}

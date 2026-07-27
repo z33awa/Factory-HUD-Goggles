@@ -1,5 +1,6 @@
 package dev.z33.factoryhud;
 
+import dev.z33.factoryhud.item.ModCreativeTabs;
 import dev.z33.factoryhud.item.ModItems;
 import dev.z33.factoryhud.network.ModNetworking;
 import dev.z33.factoryhud.server.HudServerEvents;
@@ -14,6 +15,7 @@ public final class FactoryHud {
 
     public FactoryHud(IEventBus modBus) {
         ModItems.register(modBus);
+        ModCreativeTabs.register(modBus);
         modBus.addListener(ModItems::addCreativeTabContents);
         modBus.addListener(ModNetworking::registerPayloads);
         NeoForge.EVENT_BUS.register(HudServerEvents.class);

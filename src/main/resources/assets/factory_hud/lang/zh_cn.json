@@ -1,5 +1,6 @@
 {
   "item.factory_hud.factory_goggles": "工厂仪表护目镜",
+  "itemGroup.factory_hud": "工厂仪表盘",
   "tooltip.factory_hud.binding_count": "已绑定数据源：%s",
   "tooltip.factory_hud.edit_hint": "按 W 打开配置界面",
   "tooltip.factory_hud.bind_hint": "手持本护目镜右击方块绑定或解绑",
