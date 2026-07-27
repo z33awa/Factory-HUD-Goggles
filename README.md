@@ -1,8 +1,8 @@
 # Factory HUD Goggles
 
 <p align="center">
-  <img src="src/main/resources/assets/factory_hud/textures/item/factory_goggles.png"
-       width="128" alt="Factory HUD Goggles">
+  <img src="src/main/resources/icon.png"
+       width="256" alt="Factory HUD Goggles">
 </p>
 
 <p align="center">
@@ -121,8 +121,8 @@ standalone HUD data migration regression tests.
 To publish a tagged release:
 
 ```bash
-git tag v0.3.8
-git push origin v0.3.8
+git tag v0.3.9
+git push origin v0.3.9
 ```
 
 ## License
