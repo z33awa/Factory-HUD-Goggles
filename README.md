@@ -115,22 +115,6 @@ On Windows:
 The output JAR is written to `build/libs`. The normal `build` task also runs the
 standalone HUD data migration regression tests.
 
-## GitHub Actions
-
-- **Test Build** runs for pushes to `main`, pull requests and manual dispatches.
-  It builds the mod, runs migration tests and uploads the resulting JAR as a
-  temporary artifact.
-- **Build & Release** runs for tags matching `v*` or by manual dispatch. It
-  applies the requested version, runs the full build and publishes the JAR to a
-  GitHub Release.
-
-To publish a tagged release:
-
-```bash
-git tag v0.4.1
-git push origin v0.4.1
-```
-
 ## License
 
 Released under the [MIT License](LICENSE). Copyright © 2026 z33awa.
@@ -216,13 +200,6 @@ Released under the [MIT License](LICENSE). Copyright © 2026 z33awa.
 ```
 
 构建产物位于 `build/libs`，完整构建同时执行 HUD 数据迁移回归测试。
-
-### 自动构建与发布
-
-- **Test Build**：在推送到 `main`、提交 Pull Request 或手动运行时执行完整构建，
-  并上传临时 JAR。
-- **Build & Release**：推送 `v*` 标签或手动运行时执行完整构建，并创建
-  GitHub Release。
 
 ### 许可
 
