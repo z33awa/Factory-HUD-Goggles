@@ -26,6 +26,8 @@ English · [简体中文](#简体中文)
 - Bind an unlimited number of blocks to each individual pair of goggles.
 - Find the goggles in their dedicated Factory HUD creative tab.
 - Display Create goggle information as persistent HUD cards.
+- Retain Create's normal engineer-goggle overlay for blocks that have not been
+  pinned to the dashboard.
 - Drag cards anywhere on screen in a transparent layout editor.
 - Add a note below each card to identify its purpose.
 - Resize cards from 50% to 200%.
@@ -132,6 +134,7 @@ Released under the [MIT License](LICENSE). Copyright © 2026 z33awa.
 - 每副护目镜可以绑定任意数量的数据源。
 - 可在独立的“工厂仪表盘”创造模式分页中找到护目镜。
 - 将机械动力护目镜信息持续显示为独立卡片。
+- 完整保留机械动力工程师护目镜功能，可临时查看尚未固定到仪表盘的方块信息。
 - 在透明编辑界面中直接拖动卡片。
 - 为每张卡片添加用途备注。
 - 卡片大小可以在 50%–200% 之间调整。
