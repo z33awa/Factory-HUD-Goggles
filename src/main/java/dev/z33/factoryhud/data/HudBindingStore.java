@@ -19,6 +19,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 import dev.z33.factoryhud.item.ModItems;
+import dev.z33.factoryhud.item.FactoryGogglesAccess;
 import java.util.UUID;
 
 public final class HudBindingStore {
@@ -297,8 +298,7 @@ public final class HudBindingStore {
     }
 
     public static ItemStack equippedGoggles(ServerPlayer player) {
-        ItemStack stack = player.getItemBySlot(EquipmentSlot.HEAD);
-        return stack.is(ModItems.FACTORY_GOGGLES.get()) ? stack : ItemStack.EMPTY;
+        return FactoryGogglesAccess.findWorn(player);
     }
 
     private static boolean save(ItemStack goggles, List<HudBinding> bindings) {

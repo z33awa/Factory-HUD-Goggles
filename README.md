@@ -40,15 +40,22 @@ English · [简体中文](#简体中文)
 - Preserve and migrate data written by older versions.
 - Avoid force-loading chunks.
 - Render a custom head-worn 3D goggles model.
+- Optionally equip and render the goggles through a Curios `head` slot.
 
 ## Requirements
 
 - Minecraft 1.21.1
 - NeoForge 21.1.219 or newer
 - Create 6.0.10 or newer
+- Curios API 9.5.1 or newer (optional)
 - Java 21 when building from source
 
 Install the mod on both the client and server.
+
+With Curios installed, the goggles can be worn in its `head` slot and remain
+active for the dashboard, Create goggle information and bound-block outlines.
+Custom player models such as YSM still need to expose a compatible Curios head
+render layer for correct bone following and clipping.
 
 ## Installation
 
@@ -145,14 +152,20 @@ Released under the [MIT License](LICENSE). Copyright © 2026 z33awa.
 - 自动迁移旧版本数据，并保护来自更高版本的数据。
 - 不会强制加载数据源所在区块。
 - 包含自定义头戴 3D 护目镜模型。
+- 可选兼容 Curios，可将护目镜装备到 `head` 饰品槽并通过 Curios 路径渲染。
 
 ### 运行需求
 
 - Minecraft 1.21.1
 - NeoForge 21.1.219 或更高版本
 - Create 6.0.10 或更高版本
+- Curios API 9.5.1 或更高版本（可选）
 
 客户端和服务端都需要安装本模组。
+
+安装 Curios 后，护目镜可放入其 `head` 槽，并继续启用仪表盘、Create 护目镜信息和
+已绑定方块指示。YSM 等自定义玩家模型仍需自身正确桥接 Curios 头部渲染层，最终的
+骨骼跟随与穿模情况取决于对应模型模组。
 
 ### 安装
 

@@ -2,7 +2,7 @@ package dev.z33.factoryhud.client;
 
 import dev.z33.factoryhud.FactoryHud;
 import dev.z33.factoryhud.data.HudBinding;
-import dev.z33.factoryhud.item.ModItems;
+import dev.z33.factoryhud.item.FactoryGogglesAccess;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.ChatFormatting;
@@ -12,7 +12,6 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -37,7 +36,7 @@ public final class HudOverlay {
                 || minecraft.screen instanceof HudEditorScreen) {
             return;
         }
-        if (!minecraft.player.getItemBySlot(EquipmentSlot.HEAD).is(ModItems.FACTORY_GOGGLES.get())) {
+        if (!FactoryGogglesAccess.isWearing(minecraft.player)) {
             return;
         }
 

@@ -28,6 +28,7 @@
 - 准星指向已绑定方块时，方块与对应卡片会同时显示绿色边框。
 - 不会为了读取数据而强制加载区块。
 - 包含独立创造模式分页、生存合成配方和自定义头戴 3D 模型。
+- 可选兼容 Curios，可装备到 `head` 饰品槽并通过 Curios 路径渲染。
 - 支持旧版本护目镜数据迁移，并保护由更高版本写入的数据。
 
 ## 运行需求
@@ -37,6 +38,7 @@
 | Minecraft | `1.21.1` |
 | 模组加载器 | NeoForge `21.1.219` 或更高版本 |
 | 必需前置 | Create `6.0.10` 或更高版本 |
+| 可选前置 | Curios API `9.5.1` 或更高版本 |
 | 安装位置 | 客户端与服务端均需安装 |
 
 ## 安装方法
@@ -101,6 +103,8 @@
 - 其他方块可显示基础红石信号或方块实体信息。
 - 绑定数量没有硬性上限；卡片过多时的性能开销取决于整合包和服务器环境。
 - 远端数据源所在区块不会被强制加载。
+- 安装 Curios 后，可将护目镜放入 Curios `head` 槽；固定 HUD、Create 护目镜功能和绿色目标指示都会正常识别。
+- YSM 等自定义玩家模型的最终贴合效果取决于该模型模组是否正确桥接 Curios 的头部渲染层。
 
 ## 存档安全
 
@@ -175,6 +179,7 @@ dashboard travels with them.
 - Never force-load chunks just to read HUD data.
 - Includes a dedicated creative tab, survival recipe and custom wearable 3D
   model.
+- Optionally equips and renders through a Curios `head` slot.
 - Migrates data from older versions and protects data written by newer
   versions.
 
@@ -185,6 +190,7 @@ dashboard travels with them.
 | Minecraft | `1.21.1` |
 | Mod loader | NeoForge `21.1.219` or newer |
 | Required dependency | Create `6.0.10` or newer |
+| Optional dependency | Curios API `9.5.1` or newer |
 | Installation side | Both client and server |
 
 ## Installation
@@ -256,6 +262,10 @@ player inventory.
 - There is no hard binding limit; performance with very large dashboards
   depends on the modpack and server environment.
 - Chunks containing remote data sources are never force-loaded.
+- With Curios installed, the goggles can be worn in its `head` slot while the
+  dashboard, Create goggle behavior and bound-block outlines remain active.
+- Custom player models such as YSM must expose a compatible Curios head render
+  layer; final bone following and clipping depend on the model mod.
 
 ## Save safety
 

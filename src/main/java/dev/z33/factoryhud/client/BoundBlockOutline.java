@@ -1,11 +1,10 @@
 package dev.z33.factoryhud.client;
 
 import dev.z33.factoryhud.FactoryHud;
-import dev.z33.factoryhud.item.ModItems;
+import dev.z33.factoryhud.item.FactoryGogglesAccess;
 import net.createmod.catnip.outliner.Outliner;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -33,8 +32,7 @@ public final class BoundBlockOutline {
                 || minecraft.level == null
                 || minecraft.screen != null
                 || minecraft.options.hideGui
-                || !minecraft.player.getItemBySlot(EquipmentSlot.HEAD)
-                        .is(ModItems.FACTORY_GOGGLES.get())
+                || !FactoryGogglesAccess.isWearing(minecraft.player)
                 || !(minecraft.hitResult instanceof BlockHitResult blockHit)
                 || blockHit.getType() != HitResult.Type.BLOCK) {
             return;
